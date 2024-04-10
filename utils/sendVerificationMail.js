@@ -7,7 +7,7 @@ const sendVerificationMail = (user) => {
     const verificationLink = `https://aeonaxy-frontend.onrender.com/verify?emailToken=${user.emailToken}`;
 
     const mailOptions = {
-        from: '"Aditya Aeonaxy Assignment" <adityaaeonaxy@outlook.com>',
+        from: '"Aditya Aeonaxy Assignment" <aeonaxyaditya@outlook.com>',
         to: user.email,
         subject: "Verify your email",
         html: `

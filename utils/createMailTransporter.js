@@ -4,7 +4,7 @@ const createMailTransporter = () => {
     const transporter = nodemailer.createTransport({
         service:"hotmail",
         auth:{
-            user:"adityaaeonaxy@outlook.com",
+            user:"aeonaxyaditya@outlook.com",
             pass:"Aditya0732."
         },
     });
