@@ -3,11 +3,12 @@ const nodemailer = require("nodemailer");
 const createMailTransporter = () => {
     console.log("reached in createtrans");
     const transporter = nodemailer.createTransport({
-        service:"hotmail",
-        auth:{
-            user:"aeonaxyaditya@outlook.com",
-            pass:"Aditya0732."
-        },
+        host: 'smtp.ethereal.email',
+        port: 587,
+        auth: {
+            user: 'greyson.carter@ethereal.email',
+            pass: '1CnR9s9J58BX2DJJEw'
+        }
     });
 
     return transporter;

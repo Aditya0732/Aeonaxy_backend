@@ -19,7 +19,7 @@ const sendVerificationMail = async (user) => {
     });
 
     const mailOptions = {
-        from: '"Aditya Aeonaxy Assignment" <aeonaxyaditya@outlook.com>',
+        from: '"Aditya Aeonaxy " <aeonaxyaditya@outlook.com>',
         to: user.email,
         subject: "Verify your email",
         html: `
