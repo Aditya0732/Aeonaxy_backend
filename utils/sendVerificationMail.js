@@ -1,4 +1,4 @@
-const {createMailTransporter} = require("./createMailTransporter");
+const { createMailTransporter } = require("./createMailTransporter");
 
 const sendVerificationMail = (user) => {
     const transporter = createMailTransporter();
@@ -18,12 +18,16 @@ const sendVerificationMail = (user) => {
         `,
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log("Verification email sent successfully");
-        }
+    return new Promise((resolve, reject) => {
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.log(error);
+                reject(error);
+            } else {
+                console.log("Verification email sent successfully");
+                resolve();
+            }
+        });
     });
 };
 
