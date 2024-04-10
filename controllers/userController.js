@@ -52,6 +52,7 @@ exports.changeEmail = async (req, res) => {
     user.email = newEmail;
 
     await user.save();
+    console.log("mailoptions0",user);
     sendVerificationMail(user);
 
     res.status(200).json({ message: 'Email address updated successfully', user });

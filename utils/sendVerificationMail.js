@@ -33,9 +33,11 @@ const sendVerificationMail = async (user) => {
     await new Promise((resolve, reject) => {
         transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
+                console.log("mailoptions",mailOptions);
                 console.error(err);
                 reject(err);
             } else {
+                console.log("mailoptions",mailOptions);
                 console.log(info);
                 resolve(info);
             }

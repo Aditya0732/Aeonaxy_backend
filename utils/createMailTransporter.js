@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 
 const createMailTransporter = () => {
+    console.log("reached in createtrans");
     const transporter = nodemailer.createTransport({
         service:"hotmail",
         auth:{
