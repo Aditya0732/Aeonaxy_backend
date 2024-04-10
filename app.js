@@ -10,7 +10,7 @@ const cookieParser = require('cookie-parser');
 const routes = require('./routes');
 const authenticate = require('./middleware/authMiddleware');
 
-app.use(cors());
+app.use(cors({ credentials: true, origin: 'https://aeonaxy-frontend.onrender.com' }));
 app.use(express.json());
 
 mongoose.connect('mongodb+srv://patiladitya7219:XkFwH86exzcY3xYH@cluster0.ptkllil.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {})
