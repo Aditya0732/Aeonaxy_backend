@@ -4,7 +4,7 @@ const sendVerificationMail = (user) => {
     const transporter = createMailTransporter();
 
     // Construct the verification link based on your application's route
-    const verificationLink = `https://aeonaxy-a.onrender.com/verify?emailToken=${user.emailToken}`;
+    const verificationLink = `https://aeonaxy-frontend.onrender.com/verify?emailToken=${user.emailToken}`;
 
     const mailOptions = {
         from: '"Aditya Aeonaxy Assignment" <adityaaeonaxy@outlook.com>',
